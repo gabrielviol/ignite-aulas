@@ -4,10 +4,7 @@ import "./styles/global.scss";
 
 export function App(){
 
-    return ( 
-        <>
+    return (
             <RepositoryList />
-            <Counter />
-        </>
     )
 }
