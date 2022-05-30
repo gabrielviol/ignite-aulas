@@ -49,7 +49,7 @@ export function TransactionsProvider({ children } : TransactionsProviderProps) {
         const { transaction } = response.data;
 
         setTransactions([
-            ...transaction,
+            ...transactions,
             transaction,
         ]);
     }
