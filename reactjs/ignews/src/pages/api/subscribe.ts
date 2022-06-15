@@ -13,7 +13,7 @@ type User = {
     }
 }
 
-const Subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
+const subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {
         const session = await getSession ({ req })
 
@@ -72,4 +72,4 @@ const Subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 }
 
-export default Subscribe;
+export default subscribe;
