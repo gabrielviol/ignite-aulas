@@ -43,19 +43,19 @@ export function App() {
       <Header />
       
       <div className={styles.wrapper}>
-        <Sidebar />
-        <main>
-          {posts.map(post => {
-            return (
-              <Post 
-                key={post.id}
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
-              />
-            )
-          })}
-        </main>
+      <Sidebar />
+      <main>
+        {posts.map(post => {
+          return (
+            <Post 
+              key={post.id}
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+          )
+        })}
+      </main>
       </div>
     </>
   )
