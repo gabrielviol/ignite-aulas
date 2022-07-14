@@ -6,16 +6,20 @@
 }
 
 .div input {
-    padding: 0.6rem 6rem;
+    width: 30rem;
+    height: 2.5rem;
     background-color: var(--gray-500);
-    
+    padding: 1rem;
+
     border: 1px solid var(--gray-700);
     border-radius: 0.5rem;
 }
 
 .div button {
+    color: var(--gray-100);
     margin-left: 0.3rem;
-    padding: 0.6rem 1rem;
+    width: 5rem;
+    height: 2.5rem;
     background-color: var(--blue-dark);
 
     border: 1px solid var(--gray-700);
