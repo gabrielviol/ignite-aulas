@@ -1,0 +1,23 @@
+.div {
+    margin-top: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div input {
+    padding: 0.6rem 6rem;
+    background-color: var(--gray-500);
+    
+    border: 1px solid var(--gray-700);
+    border-radius: 0.5rem;
+}
+
+.div button {
+    margin-left: 0.3rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--blue-dark);
+
+    border: 1px solid var(--gray-700);
+    border-radius: 0.5rem;
+}

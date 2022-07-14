@@ -1,8 +1,10 @@
+import styles from './NewTask.module.css'
+
 export function NewTask() {
     return (
-        <>
-            <input type="text" />
+        <div className={styles.div}>
+            <input type="text"  />
             <button>Criar</button>
-        </>
+        </div>
     )
 }
