@@ -1,0 +1,8 @@
+.top{
+    padding: 3rem 24rem;
+}
+.div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
