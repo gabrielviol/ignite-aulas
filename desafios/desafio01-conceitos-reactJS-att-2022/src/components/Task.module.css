@@ -1,4 +1,4 @@
-/* .task {
+.task {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -14,4 +14,4 @@
 .task strong {
     padding: 1rem;
     color: var(--gray-100);
-} */
+}

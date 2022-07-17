@@ -1,19 +1,19 @@
-// import { useState } from 'react';
-// import styles from './Task.module.css'
+import { useState } from 'react';
+import styles from './Task.module.css'
 
-// interface PropsTask {
-//     title: string;
-//     isComplete: boolean
-// }
+interface PropsTask {
+    title: string;
+    isComplete: boolean
+}
 
-// export function Task({ title, isComplete }: PropsTask) {
+export function Task({ title, isComplete }: PropsTask) {
 
-//     return(
+    return(
 
-//     <div className={styles.task}>
-//         <input type="checkbox" name={title}/>
-//         <strong>{title}</strong>
-//     </div>
+    <div className={styles.task}>
+        <input type="checkbox" name={title}/>
+        <strong>{title}</strong>
+    </div>
         
-//     )
-// }
+    )
+}

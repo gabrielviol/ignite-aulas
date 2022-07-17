@@ -1,12 +1,8 @@
 import { useState, FormEvent, ChangeEvent } from 'react'
 import styles from './NewTask.module.css'
+import { Task } from './Task';
 
-interface PropsTask {
-    title: string;
-    isComplete: boolean
-}
-
-export function NewTask({ title, isComplete }: PropsTask ) {
+export function NewTask() {
 
     const [tasks, setTasks] = useState ([
         'Limpar o quarto'
@@ -19,6 +15,7 @@ export function NewTask({ title, isComplete }: PropsTask ) {
 
         setTasks([...tasks, newTaskText]);
         setNewTaskText('')
+        console.log(tasks)
     }
 
     function handleNewCommentChange(event: ChangeEvent<HTMLInputElement>) {
@@ -30,20 +27,25 @@ export function NewTask({ title, isComplete }: PropsTask ) {
 
     return (
         <>
-            <div className={styles.div}>
-                <input 
-                    type="text" 
-                    placeholder='Adicione uma nova tarefa' 
-                    value={newTaskText}
-                    onChange={handleNewCommentChange}
-                />
-                <button type='submit' onClick={handleCreateTask}>Criar +</button>
-            </div>
-
-            <div className={styles.task}>
-                <input type="checkbox" name={title}/>
-                <strong>{title}</strong>
-            </div>
+        <div className={styles.div}>
+            <input 
+                type="text" 
+                placeholder='Adicione uma nova tarefa' 
+                value={newTaskText}
+                onChange={handleNewCommentChange}
+            />
+            <button type='submit' onClick={handleCreateTask}>Criar +</button>
+        </div>
+        {tasks.map(task => {
+            return(
+                <Task 
+                title={tasks}
+                isComplete={true}
+            />
+            )
+        })
+            
+        }
         </>
     )
 }
