@@ -3,7 +3,8 @@ import styles from './NewTask.module.css'
 
 
 export function CreateTask() {
-    const [task, setTask] = useState(['']);
+    const [task, setTask] = useState([])
+    
 
 }
 

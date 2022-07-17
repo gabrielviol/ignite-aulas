@@ -5,6 +5,18 @@ import './global.css'
 
 export function App() {
 
+const task = [
+  {
+    title: 'Terminar o desafio',
+    isComplete: true
+  },
+  {
+    title: 'Jogar bola',
+    isComplete: false
+  }
+
+]
+
   return (
     <>
       <Header />
