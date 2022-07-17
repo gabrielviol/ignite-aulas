@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Trash } from 'phosphor-react'
 import styles from './Task.module.css'
 
 interface PropsTask {
@@ -11,9 +11,12 @@ export function Task({ title, isComplete }: PropsTask) {
     return(
 
     <div className={styles.task}>
-        <input type="checkbox" name='valor'/>
-        <strong>{title}</strong>
-        
+        <div>
+            <input type="checkbox" name='valor'/>
+            <strong>{title}</strong>
+        </div>        
+            <button> <Trash size={20}/> </button>
+                
     </div>
         
     )
