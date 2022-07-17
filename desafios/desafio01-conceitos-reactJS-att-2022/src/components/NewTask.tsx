@@ -1,7 +1,12 @@
 import { useState, FormEvent, ChangeEvent } from 'react'
 import styles from './NewTask.module.css'
 
-export function NewTask() {
+interface PropsTask {
+    title: string;
+    isComplete: boolean
+}
+
+export function NewTask({ title, isComplete }: PropsTask ) {
 
     const [tasks, setTasks] = useState ([
         'Limpar o quarto'
@@ -14,7 +19,6 @@ export function NewTask() {
 
         setTasks([...tasks, newTaskText]);
         setNewTaskText('')
-        console.log(tasks)
     }
 
     function handleNewCommentChange(event: ChangeEvent<HTMLInputElement>) {
@@ -23,15 +27,23 @@ export function NewTask() {
     }
 
 
+
     return (
-        <div className={styles.div}>
-            <input 
-                type="text" 
-                placeholder='Adicione uma nova tarefa' 
-                value={newTaskText}
-                onChange={handleNewCommentChange}
-            />
-            <button type='submit' onClick={handleCreateTask}>Criar +</button>
-        </div>
+        <>
+            <div className={styles.div}>
+                <input 
+                    type="text" 
+                    placeholder='Adicione uma nova tarefa' 
+                    value={newTaskText}
+                    onChange={handleNewCommentChange}
+                />
+                <button type='submit' onClick={handleCreateTask}>Criar +</button>
+            </div>
+
+            <div className={styles.task}>
+                <input type="checkbox" name={title}/>
+                <strong>{title}</strong>
+            </div>
+        </>
     )
 }

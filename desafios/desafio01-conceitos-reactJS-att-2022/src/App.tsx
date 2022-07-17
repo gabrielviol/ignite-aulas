@@ -22,12 +22,9 @@ const task = [
     <>
       <Header />
       
-      <NewTask />
-      <div className={styles.wrapper}>
-      <main>
-        {task.map(task => {
+      {task.map(task => {
           return (
-            <Task
+            <NewTask
               key={task.title}
               title={task.title}
               isComplete={task.isComplete}
@@ -35,6 +32,9 @@ const task = [
             
           )
         })}
+      <div className={styles.wrapper}>
+      <main>
+        
         
       </main>
       </div>
