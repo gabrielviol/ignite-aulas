@@ -1,9 +1,19 @@
-import stlyes from './Task.module.css'
+import { useState } from 'react';
+import styles from './Task.module.css'
 
-export function Task() {
+interface PropsTask {
+    title: string;
+    isComplete: boolean
+}
+
+export function Task({ title, isComplete }: PropsTask) {
+
     return(
-        <div className={stlyes.task}>
-            <input type="checkbox" name="todo"/>
-        </div>
+
+    <div className={styles.task}>
+        <input type="checkbox" name={title}/>
+        <strong>{title}</strong>
+    </div>
+        
     )
 }
