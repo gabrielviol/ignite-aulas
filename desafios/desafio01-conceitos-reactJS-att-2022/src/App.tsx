@@ -20,8 +20,15 @@ const task = [
   return (
     <>
       <Header />
-      <NewTask />
-      <Tasks />
+      <main>
+        <NewTask />
+        {task.map(task => {
+          return (
+            <Tasks />
+          )
+        })}
+        
+      </main>
     </>
   )
 }
