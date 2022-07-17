@@ -11,8 +11,9 @@ export function Task({ title, isComplete }: PropsTask) {
     return(
 
     <div className={styles.task}>
-        <input type="checkbox" name={title}/>
+        <input type="checkbox" name='valor'/>
         <strong>{title}</strong>
+        
     </div>
         
     )

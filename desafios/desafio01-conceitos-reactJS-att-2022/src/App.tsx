@@ -1,44 +1,56 @@
 import { Header } from './components/Header'
-import { NewTask } from './components/NewTask'
 import { Task } from './components/Task'
 import './global.css'
 import styles from './App.module.css'
+import { useState, FormEvent, ChangeEvent } from 'react'
 
 export function App() {
 
-const task = [
-  {
+  const [tasks, setTasks] = useState([
+    'Limpar o quarto'
+  ])
 
-    title: 'Terminar o desafio',
-    isComplete: true
-  },
-  {
-    title: 'Jogar bola',
-    isComplete: false
-  },
-]
+  const [newTaskText, setNewTaskText] = useState('')
+
+  function handleCreateTask(event: FormEvent) {
+    event.preventDefault();
+
+    setTasks([...tasks, newTaskText]);
+    setNewTaskText('')
+    console.log(tasks)
+  }
+
+  function handleNewCommentChange(event: ChangeEvent<HTMLInputElement>) {
+    event.target.setCustomValidity('');
+    setNewTaskText(event.target.value);
+  }
 
   return (
     <>
       <Header />
-      
-      <NewTask 
-        
-      />
+
+      <div className={styles.div}>
+        <input
+          type="text"
+          placeholder='Adicione uma nova tarefa'
+          value={newTaskText}
+          onChange={handleNewCommentChange}
+        />
+        <button type='submit' onClick={handleCreateTask}>Criar +</button>
+      </div>
       <div className={styles.wrapper}>
-      <main>
-        {task.map(task => {
-          return (
-            <Task
-              key={task.title}
-              title={task.title}
-              isComplete={task.isComplete}
-            />
-            
-          )
-        })}
-        
-      </main>
+        <main>
+
+          {tasks.map(tasks => {
+            return (
+              <Task
+                title={tasks}
+                isComplete={true}
+              />
+            )
+          })
+          }
+        </main>
       </div>
     </>
   )
