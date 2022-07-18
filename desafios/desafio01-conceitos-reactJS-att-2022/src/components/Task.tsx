@@ -1,12 +1,17 @@
-import { Trash } from 'phosphor-react'
+import { Trash} from 'phosphor-react'
 import styles from './Task.module.css'
 
 interface PropsTask {
     title: string;
-    isComplete: boolean
+    isComplete: boolean;
+    onDeleteTask: (title: string) => void;
 }
 
-export function Task({ title, isComplete }: PropsTask) {
+export function Task({ title, isComplete, onDeleteTask }: PropsTask) {
+    
+    function handleDeleteTask() {
+        onDeleteTask(title);
+    }
 
     return(
 
@@ -15,7 +20,7 @@ export function Task({ title, isComplete }: PropsTask) {
             <input type="checkbox" name='valor'/>
             <strong>{title}</strong>
         </div>        
-            <button> <Trash size={20}/> </button>
+            <button onClick={handleDeleteTask}> <Trash size={20}/> </button>
                 
     </div>
         

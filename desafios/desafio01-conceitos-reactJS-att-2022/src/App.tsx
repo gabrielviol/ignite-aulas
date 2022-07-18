@@ -25,6 +25,14 @@ export function App() {
     setNewTaskText(event.target.value);
   }
 
+  function deleteTask(taskToDelete: string){
+    const tasksWithoutDeleteOne = tasks.filter(task => {
+      return task !== taskToDelete;
+    })
+
+    setTasks(tasksWithoutDeleteOne);
+  }
+
   return (
     <>
       <Header />
@@ -46,6 +54,7 @@ export function App() {
               <Task
                 title={tasks}
                 isComplete={true}
+                onDeleteTask={deleteTask}
               />
             )
           })
