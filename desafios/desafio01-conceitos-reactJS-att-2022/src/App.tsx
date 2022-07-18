@@ -4,6 +4,13 @@ import './global.css'
 import styles from './App.module.css'
 import { useState, FormEvent, ChangeEvent } from 'react'
 
+const task = [
+  {
+    title: 'Arrumar o quarto',
+    isComplete: true,
+  }
+]
+
 export function App() {
 
   const [tasks, setTasks] = useState([
@@ -17,10 +24,9 @@ export function App() {
 
     setTasks([...tasks, newTaskText]);
     setNewTaskText('')
-    console.log(tasks)
   }
 
-  function handleNewCommentChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity('');
     setNewTaskText(event.target.value);
   }
@@ -33,6 +39,10 @@ export function App() {
     setTasks(tasksWithoutDeleteOne);
   }
 
+  function handleChecked(event: ChangeEvent<HTMLInputElement>) {
+    console.log(event.target.value)
+  }
+
   return (
     <>
       <Header />
@@ -42,7 +52,7 @@ export function App() {
           type="text"
           placeholder='Adicione uma nova tarefa'
           value={newTaskText}
-          onChange={handleNewCommentChange}
+          onChange={handleNewTaskChange}
         />
         <button type='submit' onClick={handleCreateTask}>Criar +</button>
       </div>
