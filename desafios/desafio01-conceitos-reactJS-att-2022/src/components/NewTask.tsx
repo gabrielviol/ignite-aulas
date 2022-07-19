@@ -12,20 +12,18 @@ export function NewTask() {
 
     function handleCreateTask(event: FormEvent) {
         event.preventDefault();
-
         setTasks([...tasks, newTaskText]);
         setNewTaskText('')
-        console.log(tasks)
+        
     }
-
     function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
         event.target.setCustomValidity('');
         setNewTaskText(event.target.value);
-      }
+    }
 
-    function deleteTask(taskToDelete: string){
+    function deleteTask(taskToDelete: string) {
         const tasksWithoutDeleteOne = tasks.filter(task => {
-          return task !== taskToDelete;
+            return task !== taskToDelete;
         })
         setTasks(tasksWithoutDeleteOne);
     }
@@ -48,7 +46,7 @@ export function NewTask() {
                         return (
                             <Task
                                 title={tasks}
-                                isComplete={true}
+                                isComplete
                                 onDeleteTask={deleteTask}
                             />
                         )
