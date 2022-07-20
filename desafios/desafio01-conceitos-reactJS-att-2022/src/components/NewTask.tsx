@@ -45,6 +45,7 @@ export function NewTask() {
                     {tasks.map(tasks => {
                         return (
                             <Task
+                                key={tasks}
                                 title={tasks}
                                 isComplete
                                 onDeleteTask={deleteTask}
