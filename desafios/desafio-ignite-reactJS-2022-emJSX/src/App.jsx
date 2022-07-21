@@ -87,7 +87,9 @@ export function App(props) {
           {filterList}
           
         </div>
+        <ul>
         {taskList}
+      </ul>
       </main>
 
     </>
