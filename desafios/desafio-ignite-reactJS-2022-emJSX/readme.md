@@ -17,7 +17,7 @@
   <li> Imutabilidade do estado</li> 
   <li> Listas e chaves no ReactJS</li> 
   <li> Propriedades</li> 
-  <li> Componentizaçã</li> 
+  <li> Componentização</li> 
   
   <h1 align="center">
   <img alt="to-do list" title="to-do list" src="./src/assets/todo.png" />
