@@ -1,5 +1,5 @@
 .div {
-    margin-top: -1rem;
+    margin-top: -3.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,6 +13,8 @@
 
     border: 1px solid var(--gray-700);
     border-radius: 0.5rem;
+
+    color: var(--gray-100);
 }
 
 .div button {

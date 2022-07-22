@@ -9,11 +9,24 @@
 
     border-radius: 0.5rem;
     border: 1px solid var(--gray-300);
+
+  
 }
 
-.task strong {
+.task label {
     padding: 1rem;
     color: var(--gray-100);
+    
+}
+
+.task input + label {
+    cursor: pointer;
+}
+
+.task input:checked + label{
+    opacity: .5;
+    transition: .2s;
+    text-decoration: line-through;
 }
 
 button {

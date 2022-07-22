@@ -12,7 +12,7 @@ export function Task(props) {
           defaultChecked={props.completed}
           onChange={() => props.toggleTaskChecked(props.id)}
         />
-        <strong htmlFor={props.id}>{props.title}</strong>
+        <label htmlFor={props.id}>{props.title}</label>
       </div>
       <button
         type="button"
