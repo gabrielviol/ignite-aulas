@@ -24,4 +24,7 @@
 
 body {
     background: var(--gray-600);
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 140%;
 }

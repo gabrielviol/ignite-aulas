@@ -4,14 +4,24 @@ import { App } from './App'
 
 const tasks = [
   {
-    id: 1,
+    id: 'blabla345',
     title: 'Arrumar o quarto',
-    checked: false
+    completed: false
   },
   {
-    id: 2,
+    id: 'blabla65654',
     title: 'Terminar defasio Ignite',
-    checked: true
+    completed: true
+  },
+  {
+    id: 'blabaala65654',
+    title: 'Terminar defasio Ignite',
+    completed: true
+  },
+  {
+    id: 'blablssa65654',
+    title: 'Terminar defasio Ignite',
+    completed: false
   }
 ];
 

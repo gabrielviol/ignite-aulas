@@ -1,6 +1,35 @@
 .wrapper {
     max-width: 70rem;
     margin: 2rem auto;
-    padding: 0 12rem;
+    padding: 0 14rem;
 
 }
+
+.headerContent {
+    margin: auto 1rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.headerContent strong{
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+}
+
+.headerContent strong + strong{
+    color: var(--purple);
+}
+
+.headerContent strong div{
+    margin-left: 0.5rem;
+    padding: 0.1px 4px;
+    background-color: var(--gray-400);
+    border: solid var(--gray-400);
+    border-radius: 3rem;
+    color: var(--gray-100);
+}
+
