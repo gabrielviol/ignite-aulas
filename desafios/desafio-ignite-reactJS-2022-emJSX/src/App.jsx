@@ -50,17 +50,25 @@ export function App(props) {
   }
   ` ${taskList.length} de ${taskList.length} `;
   
-  const taskCompleted = tasks.reduce((taskCompleted, taskAtual) =>{
+  // const taskCompleted = tasks.reduce((taskCompleted, taskAtual) =>{
     
-    taskCompleted[taskAtual.completed] = taskAtual.completed[taskAtual.completed] || [] 
-    taskCompleted[taskAtual.completed].push(taskAtual);
+  //   taskCompleted[taskAtual.title ] = [taskAtual.title ] || [] 
+  //   taskCompleted[taskAtual.title].push(taskAtual);
 
-    return taskCompleted;
-  }, {})
+  //   return taskCompleted;
+    
+  // }, {})
+  function changeCompletes(arrayCompleted, itemAtual){
+    if(itemAtual.completed === true){
+      arrayCompleted.push(itemAtual.push);
+    }
+    return arrayCompleted
+  }
 
-  console.log()
+  const taskCompleted = tasks.reduce(changeCompletes, [])
+  console.log(taskCompleted)
   
-  const agreementTask = taskList.length !== 1 ? 'Concluídas' : 'Concluída';
+  const agreementTask = taskCompleted.length > 1 ? 'Concluídas' : 'Concluída';
 
   return (
     <>
@@ -70,7 +78,7 @@ export function App(props) {
           <NewTask createTask={createTask} />
           <div className={styles.headerContent}>
             <strong>Tarefas criadas <div>{taskList.length}</div></strong>
-            <strong>{agreementTask}<div>{}</div></strong>
+            <strong>{agreementTask}<div>{taskCompleted.length}</div></strong>
           </div>
           {taskList}
         </div>

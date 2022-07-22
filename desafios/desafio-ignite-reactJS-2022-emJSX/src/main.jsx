@@ -9,7 +9,7 @@ const tasks = [
     completed: false
   },
   {
-    id: 'blabla65654',
+    id: 'gabriel',
     title: 'Terminar defasio Ignite',
     completed: true
   },
