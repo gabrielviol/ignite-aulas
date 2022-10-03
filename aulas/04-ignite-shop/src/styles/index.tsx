@@ -1,6 +1,6 @@
 import { createStitches } from "@stitches/react"; 
 
-const {
+export const {
     config,
     styled,
     css,
