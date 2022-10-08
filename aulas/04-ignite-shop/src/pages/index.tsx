@@ -15,7 +15,7 @@ interface HomeProps {
     id: string;
     name: string;
     imageUrl: string;
-    price: number;
+    price: string;
   }[]
 }
 
@@ -67,9 +67,6 @@ export const getStaticProps: GetStaticProps = async () => {
       }).format(price.unit_amount / 100),
     }
   })
-
-
-  console.log(response)
 
   return {
     props: {
