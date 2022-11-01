@@ -5,11 +5,7 @@ export default {
   title: 'Surfaces/Box',
   component: Box,
   args: {
-    children: (
-      <>
-        <Text>Tstando o elemento box</Text>
-      </>
-    ),
+    children: <Text>Tstando o elemento box</Text>,
   },
 } as Meta<BoxProps>
 export const Primary: StoryObj<BoxProps> = {}
