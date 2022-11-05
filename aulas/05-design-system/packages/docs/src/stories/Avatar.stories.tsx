@@ -8,6 +8,13 @@ export default {
     src: 'https://github.com/gabrielviol.png',
     alt: 'Gabriel Viol',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
