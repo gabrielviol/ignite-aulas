@@ -13,7 +13,7 @@ export const TextInputContainer = styled('div', {
     borderColor: '$ignite300',
   },
 
-  '&:has(input:disbled)': {
+  '&:has(input:disabled)': {
     opacity: 0.5,
     cursor: 'not-allowed',
   },

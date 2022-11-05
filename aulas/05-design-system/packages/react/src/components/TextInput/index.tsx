@@ -8,7 +8,7 @@ export interface TextInputProps extends ComponentProps<typeof Input> {
 export function TextInput({ prefix, ...props }: TextInputProps) {
   return (
     <TextInputContainer>
-      {!!prefix && <Prefix></Prefix>}
+      {!!prefix && <Prefix>{prefix}</Prefix>}
       <Input {...props} />
     </TextInputContainer>
   )
